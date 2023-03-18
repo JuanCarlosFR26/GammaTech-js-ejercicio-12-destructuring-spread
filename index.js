@@ -230,10 +230,13 @@ const student2 = {
 // console.log(student2)
 // console.log(newStudent);
 
-const newStudent = { ...student2 };
+const newStudent = JSON.parse(JSON.stringify(student2));
+
 newStudent.skills.frontEnd.push({skill: 'Bootstrap', level: 8});
 newStudent.skills.backEnd.push({skill: 'Express', level: 9});
 newStudent.skills.dataBase.push({skill: 'SQL',level: 8});
 newStudent.skills.dataScience.push('SQL');
 
-console.log(newStudent)
+console.log(student2.skills)
+console.log(newStudent.skills)
+
